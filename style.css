@@ -131,27 +131,132 @@ img {
 
 .featuredProducts-container {
     padding: 3rem 4rem;
-}
-
-.featuredProducts {
-    display: flex;
-    gap: 2rem;
+    background-color: #f7f7f7;
 }
 
 .featuredProducts-title {
     font-size: 3rem;
     margin-bottom: 3rem;
     padding: 0;
+    text-align: center; 
+}
+
+.featuredProducts {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: nowrap; 
 }
 
 .featuredProduct {
-    padding: 2rem;
-    background-color: #f0f0f0;
-    border-radius: 0.5rem;
+    flex: 1 1 calc(25% - 2rem); 
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    max-width: 100%;
 }
 
-.featuredProduct:hover {
-    transform: translateY(-0.5rem);
+.featuredProduct-image {
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
 }
+
+.featuredProduct:hover .featuredProduct-image {
+    transform: scale(1.05);
+}
+
+.featuredProduct-title {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.featuredProduct-description {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+.featuredProduct-price {
+    font-size: 1.6rem;
+    color: #e63946;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.featuredProduct-button {
+    background-color: #e63946;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.featuredProduct-button:hover {
+    background-color: #d62839;
+}
+
+.featuredProduct:hover .featuredProduct-title {
+    text-decoration: underline; 
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-top {
+    margin-bottom: 2rem;
+}
+
+.footer-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-socials a img {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.footer-socials a img:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #e63946;
+}
+
+
