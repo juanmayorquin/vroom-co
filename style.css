@@ -42,6 +42,7 @@ img {
     padding: 0 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: #fff;
+    position: sticky;
 }
 
 .navbar a {
@@ -197,8 +198,7 @@ img {
 .featuredProduct-price {
     font-size: 1.6rem;
     color: #000;
-    
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .featuredProduct-button {
@@ -270,4 +270,24 @@ img {
     color: #d6d6d6;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        height: 13vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        ;
+        padding: 0;
+    }
+    
+    .featuredProducts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        justify-content: space-between;
+        flex-wrap: nowrap; 
+    }
 
+    .featuredProduct-description {
+        display: none;
+    }
+}
